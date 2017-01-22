@@ -1,0 +1,19 @@
+﻿
+@using AirPlane.WebUI.Models;
+@model AirPlane.WebUI.Models.PlanesListViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+@foreach (var p in Model.Airplanes)
+{
+
+    @Html.Partial("AirPlaneSummary",p)
+   
+    
+    
+
+} @Html.PageLinks(Model.pagingInfo, x => Url.Action("List", new { page = x, category = Model.currentCategory }))
+<h2>List of AirPlanses</h2>
+
+    )

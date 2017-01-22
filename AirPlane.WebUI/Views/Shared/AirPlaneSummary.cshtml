@@ -1,0 +1,39 @@
+﻿@model AirPlane.Domain.Entities.Aircraft
+
+<div class="well">
+    @if (Model.FullImage != null)
+    {
+        <div class="pull-left" style="margin-right: 10px">
+           <a href="@Url.Action("GetImage", "Aircraft", new { Model.AircraftID }) "> <img  class="img-responsive" width="150" height="150"
+                 src="@Url.Action("GetImage", "Aircraft", new { Model.AircraftID })" ></a>
+        </div>
+    }
+    <h3>
+        <strong>@Model.Name  @Model.Type
+            </strong>
+        <span class="pull-right label label-primary">
+           @((Model.Name.Length * Model.Type.Length).ToString("c"))
+        </span>
+    </h3>
+        <br>
+            @using (Html.BeginForm("AddToCart", "Cart"))
+            {
+           <div class="pull-right">
+
+            @Html.HiddenFor(x => x.AircraftID)
+            @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+            <input type="submit" class="btn btn-success" value="Add to Cart " />
+        </div>
+
+            }
+  
+       
+        
+ 
+    <span class="text-info"> @Model.Description</span>
+    
+
+ 
+
+
+</div>
