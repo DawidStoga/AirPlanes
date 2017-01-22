@@ -61,8 +61,8 @@ namespace AirPlane.WebUI.Controllers
                 return null;
             }
         }
-        [Route("Pokaz /{id}")]
-        public ViewResult pokaz()
+        [Route("ShowMeTest/{id}")]
+        public ViewResult Test()
         {
             return View();
         }
