@@ -3,11 +3,79 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Fly Web Page</title>
+    <title >@ViewBag.Title - Fly Web Page</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/ErrorStyles.css" rel="stylesheet" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="~/Scripts/jquery-3.1.1.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+  
+    <style type="text/css">
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+
+        div.dataElem {
+            margin: 5px;
+        }
+
+        h2 > label {
+            width: inherit;
+        }
+
+        .editor-label, .editor-field {
+            float: left;
+            margin-top: 10px;
+        }
+
+       .editor-field input {
+            height: 20px;
+        }
+
+        .editor-label {
+            clear: left;
+        }
+
+        .editor-field {
+            margin-left: 10px;
+        }
+
+        input[type=submit] {
+            float: left;
+            clear: both;
+            margin-top: 10px;
+        }
+
+        .column {
+            float: left;
+            margin: 10px;
+        }
+        table, td, th {
+            border: thin solid black;
+            border-collapse: collapse;
+            padding: 5px; 
+            background-color: lemonchiffon;
+            text-align: left;
+            margin: 10px 0;
+        }
+
+        div.load {
+            color: red;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        div.ajaxLink {
+            margin-top: 10px;
+            margin-right: 5px;
+            float: left; 
+
+        }
+    </style>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -36,6 +104,8 @@
         <div id="categories" class="col-xs-3">
           @Html.Action("Menu", "Nav")
         </div>
+      @*@RenderSection("Angular")*@
+
         <div  class="col-xs-8">
             @RenderBody()
         </div>
@@ -44,11 +114,32 @@
        
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p id="title">&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
+ 
+    
 
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+
+            $("*").draggable();
+
+            $("#title").on({
+                mouseenter: function () {
+                    $(".col-xs-8").fadeTo("slow", 0.45);
+                },
+                mouseleave: function () {
+                    $(".col-xs-8").fadeTo("slow", 1);
+                },
+                click: function()
+                {      
+                    $(".img-responsive").animate({ width: '120' });
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>

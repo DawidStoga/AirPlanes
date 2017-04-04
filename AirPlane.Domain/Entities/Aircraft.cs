@@ -25,6 +25,7 @@ namespace AirPlane.Domain.Entities
         public string Category { get; set; }
         [Range(0,8,ErrorMessage ="Please enter the correct value")]
         public int EngineCnt { get; set; }
+        [DisplayFormat(DataFormatString = "http\\:{0}", ApplyFormatInEditMode = true)]
         public string ImageURl { get; set; }
         public byte[] ThumbnailBits { get; set; }
 

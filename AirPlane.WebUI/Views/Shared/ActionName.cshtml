@@ -1,0 +1,47 @@
+﻿@model RouteValueDictionary
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ActionName</title>
+</head>
+<body>
+    <div> The controller is  : @ViewBag.Controller</div>
+    <div> The action  is     : @ViewBag.Action    </div>
+    <div> The variable is    : @ViewBag.CustomVariable    </div>
+    <br />
+    <div> Route 0  : @Model["controller"]</div>
+    <div> Route 1  : @Model["action"]</div>
+    <div> Route 2  : @Model["id"]</div>
+    @foreach (var v in Model)
+    {
+        <div> <br /> @v.Value</div>
+    }
+
+
+    <div>
+        <div>ActionLink</div>
+        <div> @Html.ActionLink("   1) output URL - /Index", "Index")</div>
+        <div>  @Html.ActionLink("   2) output URL - /ParamIndex", "ParamIndex", new { id = 222 })</div>
+        <div>  @Html.ActionLink("   4) output URL - /RouteHome/Index", "Index", "RouteHome")</div>
+        <div>  @Html.ActionLink("   5) output URL - /ParamIndex + attributes", "ParamIndex", new { id = 555 }, new { id = "myAnchorID", @class = "myCSSclass" })</div>
+        <div>  @Html.ActionLink("   10) output URL- /RouteHome/ParamIndex  + All", "ParamIndex", "RouteHome", "https", "http://localhost:52933/", "frag1", new { id = 1000 }, new { id = "myAnchorID", @class = "myCSSclass" })</div>
+        
+        <div>Action</div>
+        <div>@Url.Action("Index");</div>
+        <div> @Url.Action("ParamIndex", new { id = 124 })</div>
+        <div>@Url.Action("ParamIndex", "RouteHome", new { id = 123 })</div>
+        </div>
+
+    <div>RouteLink</div>
+    <div> @Html.RouteLink("Click Me", "Add_Segment",2)</div>
+
+    <div>LegacyURl</div>
+    <div> @Html.ActionLink("Click me", "GetLegacyUrl", new { LegacyUrl= "~/old/.NET1,0_Class_Library" }) </div>
+</body>
+</html>

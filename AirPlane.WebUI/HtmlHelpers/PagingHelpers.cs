@@ -14,6 +14,7 @@ namespace AirPlane.WebUI.HtmlHelpers
 
    public static MvcHtmlString PageLinks (this HtmlHelper html,PagingInfo pagingInfo, Func<int, string> pageUrl)
         {
+            var firstRoute = html.RouteCollection[1].ToString();
 
             StringBuilder result = new StringBuilder();
             for( int pag = 1; pag<=pagingInfo.TotalPages; pag++)
@@ -29,7 +30,7 @@ namespace AirPlane.WebUI.HtmlHelpers
                 tag.AddCssClass("btn btn-default");
                 result.Append(tag.ToString());
             }
-            return MvcHtmlString.Create(result.ToString());
+            return MvcHtmlString.Create(result.ToString()+ firstRoute);
            
 
         }

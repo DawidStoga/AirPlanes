@@ -21,6 +21,7 @@ namespace AirPlane.Domain.Entities
         public string City { get; set; }
         [Required(ErrorMessage = "Please enter a state name")]
         public string State { get; set; }
+        [DisplayFormat(DataFormatString ="ZIP: {0:##-###", ApplyFormatInEditMode =true)]
         public string Zip { get; set; }
         [Required(ErrorMessage = "Please enter a country name")]
         public string Country { get; set; }

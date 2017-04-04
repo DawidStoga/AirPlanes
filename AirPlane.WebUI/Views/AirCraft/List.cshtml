@@ -1,19 +1,35 @@
 ﻿
 @using AirPlane.WebUI.Models;
+@using PagedList.Mvc;
 @model AirPlane.WebUI.Models.PlanesListViewModel
 @{
     ViewBag.Title = "Index";
 }
+@helper InnerHelper()
+    {
+   <b>Total Pages: @Model.pagingInfo.TotalPages</b> 
+    }
 
+@*@section Angular {
+
+    
+}*@
 @foreach (var p in Model.Airplanes)
 {
 
-    @Html.Partial("AirPlaneSummary",p)
+   @Html.Partial("AirPlaneSummary",p)
    
     
     
 
-} @Html.PageLinks(Model.pagingInfo, x => Url.Action("List", new { page = x, category = Model.currentCategory }))
+} 
+@*Inner extension*@
+@InnerHelper()
+@*own extension helper*@
+@Html.PageLinks(Model.pagingInfo, x => Url.Action("List","Aircraft", new { page = x, category = Model.currentCategory }))
 <h2>List of AirPlanses</h2>
 
-    )
+@*asp.net helper*@
+@Html.PagedListPager(Model.Airplanes as PagedList.IPagedList ,pageX=>Url.Action("List", "Aircraft", new { page = pageX, category = Model.currentCategory }))
+
+

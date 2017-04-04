@@ -1,0 +1,20 @@
+﻿@model int
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RangeError</title>
+</head>
+<body>
+    <div> 
+        value @Model is out of Range
+
+        <div> @Html.ActionLink("Zmien Wartosc i sprobuj ponownie", "RangeTest", new { id = 2 })</div>
+    </div>
+</body>
+</html>

@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -59,6 +60,7 @@
     <Compile Include="Concrete\StudentRepostory.cs" />
     <Compile Include="Concrete\EFDbContext.cs" />
     <Compile Include="Concrete\EFAirPlaneRepostory.cs" />
+    <Compile Include="DAL\EfConfiguration.cs" />
     <Compile Include="Entities\Aircraft.cs" />
     <Compile Include="Entities\Cart.cs" />
     <Compile Include="Entities\ShippingDetails.cs" />
