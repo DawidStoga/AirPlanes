@@ -44,6 +44,21 @@
     
       $(this).text(chck);
     });
+    /*****************************/   
+     $("p:nth-child(6)").on(
+         {           
+             click: function () {
+               $("p:nth-child(1)").removeClass("classA");
+              
+             } 
+         }
+     );    
+   /*******************/
+       $("p:nth-child(7)").click(function () {
 
-
+         $(this).toggleClass("classA");
+       });
+   /*****************************/ 
+ 
+   /*****************************/ 
 });
