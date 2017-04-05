@@ -1,64 +1,172 @@
 ﻿$(document).ready(function () {
-    $("p:nth-child(1)").click(function () {
-        $(this).addClass("classA").addClass("classB");
-        $(this).addClass(function (index) {
+
+
+    /********ATTRIBUTES**************************/
+    $("#attributes p:nth-child(1)").click(function () {
+        $("#resultAttr").addClass("classA").addClass("classB");
+        $("#resultAttr").addClass(function (index) {
             console.log(index);
             return "classC";
         });
     });
 
     /*******************/
-    $("p:nth-child(2)").click(function () {
-        $(this).attr("align", "center");
+    $("#attributes p:nth-child(2)").click(function () {
+        $("#resultAttr").attr("align", "center");
         var al = $(this).attr("align");
-        $(this).attr({
+        $("#resultAttr").attr({
             align: "left"
         });
         console.log(al);
-        $(this).text(al);
+        $("#resultAttr").text(al);
     });
     /*****************************/
-    $("p:nth-child(3)").click(function () {
-        var hasclass = $(this).hasClass("classA");
+    $("#attributes p:nth-child(3)").click(function () {
+        var hasclass = $("#resultAttr").hasClass("classA");
 
-        $(this).text("Has class A? : " + hasclass);
+        $("#resultAttr").text("Has class A? : " + hasclass);
 
     });
     /*****************************/
-    $("p:nth-child(4)").on(
+    $("#attributes p:nth-child(4)").on(
         {
             mouseenter: function () {
-                var ht = $(this).html();
+                var ht = $("#resultAttr").html();
 
                 console.log(ht);
-                $(this).text(ht);
+                $("#resultAttr").text(ht);
+            },
+            mouseleave:function(){
+                $("#resultAttr").text("html");
             }
         }
         );
 
     /*******************/
-    $("p:nth-child(5)").click(function () {
+    $("#attributes p:nth-child(5)").click(function () {
         var t = $(":checkbox");
        
         var chck = $(":checkbox").prop("checked");
     
-      $(this).text(chck);
+        $("#resultAttr").text(chck);
     });
-    /*****************************/   
-     $("p:nth-child(6)").on(
+    /*****************************/   
+    $("#attributes p:nth-child(6)").on(
          {           
              click: function () {
-               $("p:nth-child(1)").removeClass("classA");
+                 $("p:nth-child(1)").removeClass("classA");
               
              } 
          }
      );    
-   /*******************/
-       $("p:nth-child(7)").click(function () {
+    /*******************/
+    $("#attributes p:nth-child(7)").click(function () {
 
-         $(this).toggleClass("classA");
-       });
-   /*****************************/ 
+        $("#resultAttr").toggleClass("classA");
+    });
+    /*******************/
+    $("#attributes p:nth-child(8)").click(function () {
+
+        $(":input").val("Added text by using .val");
+    });
+
+
+
+
+
+    /*****************************/ 
+    //CALLBACKS
+    /*****************************/ 
+    var callbacks = $.Callbacks();
+    var foo1 = function (value) {
+        $("#result").text(" foo1 was called" + value);
+    }
+    var foo2 = function (value) {
+        $("#result").text(" foo2 was called" + value);
+    }
+    $("#callbacks p:nth-child(1)").click(function () {
+
+        callbacks.add(foo1);
+        callbacks.add(foo2);
+        $("#result").text("foo1 & foo2 added -use .has() to check this or   execute .fire()");
+
+    })
+    $("#callbacks p:nth-child(5)").click(function () {
+        console.log(callbacks.disabled());
+        if (callbacks.disabled())
+        {
+            $("#result").text(" Still Disabled - please clear and add once again");
+        }
+        callbacks.fire(" -Yupii !!!")
+    })
+
+    /**************Disable*******************/
+    $("#callbacks p:nth-child(2)").click(function () {
+        $("#result").text("Disabled (you shouldn't see the result!");
+        callbacks.disable();
+        callbacks.fire(" -Yupii !!!")
+
+    })
+
+    /**************Empty*******************/
+    $("#callbacks p:nth-child(4)").click(function () {
+        $("#result").text("Cleared - use .has() to check this");
+        callbacks.empty();
+        callbacks.fire(" -Yupii !!!")
+
+    })
+
+    /**************Empty*******************/
+    $("#callbacks p:nth-child(8)").click(function () {
+        console.log(callbacks.has());
+        var eq = callbacks.has();
+
+        $("#result").text("Callback" + (eq == true ? "Has registered functions" : "is empty"));
+      
+    })
+    /**************Empty*******************/
+    $("#callbacks p:nth-child(9)").click(function () {
+    
+        callbacks.lock();
+        callbacks.add(function () {
+
+            $("#result").text("WFT!");
+        }
+            );
+        $("#result").text("callback is locked -> then registered new fct..try to fire all of them");
+
+    })
+
+    /**************locked*******************/
+    $("#callbacks p:nth-child(10)").click(function () {
+
+
+        $("#result").text("is locked: " + callbacks.locked());
+
+    })
  
-   /*****************************/ 
+
+
+    $("#core p:nth-child(7)").click(function () {
+
+        var d1 = $.Deferred();        
+        (d1).done(function (v1) {
+            $("#resultCore").text(v1);
+        });
+        d1.resolve(5);
+    });
+
+
+    $("#ajax p:nth-child(1)").click(function () {
+        $.ajax(url = "/People/GetPeopleDataJson?selectedRole=User", options = {
+            method: "GET",
+            dataType: "json"
+
+        }).done(function (data) {
+            console.log(data);
+        });
+    });
+        
+
+
 });
