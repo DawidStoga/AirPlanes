@@ -23,6 +23,48 @@
 <a class="btn btn-block btn-default btn-lg  btn-info" data-toggle="collapse" href="#collapse1">MVC  Guide </a>
 <div id="collapse1" class="panel-collapse collapse">
     <div class="panel-body">
+        @Html.RouteLink("Model- Entity Framework",
+    new
+    {
+        Controller = "MVCGuide",
+        action = "EFAction"
+    },
+    new
+    {
+        @class = ""
+    }
+    )
+    </div>
+
+    <div class="panel-body">
+        @Html.RouteLink("Controller",
+    new
+    {
+        Controller = "MVCGuide",
+        action = "ControllerAction"
+    },
+    new
+    {
+        @class = ""
+    }
+    )
+    </div>
+
+
+    <div class="panel-body">
+        @Html.RouteLink("View",
+    new
+    {
+        Controller = "MVCGuide",
+        action = "ViewAction"
+    },
+    new
+    {
+        @class = ""
+    }
+    )
+    </div>
+    <div class="panel-body">
         @Html.RouteLink("Helper Method - Controls",
     new
     {

@@ -11,7 +11,7 @@ namespace AirPlane.WebUI.Infrastructure
 {
     public class CustomControllerFactory : IControllerFactory
     {
-        
+        // controllerName from the url
         public IController CreateController(RequestContext requestContext, string controllerName)
         {
             Type targetType = null;

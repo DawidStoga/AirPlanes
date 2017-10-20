@@ -28,6 +28,9 @@ namespace AirPlane.Domain.Concrete
                      m.ToTable("AirPlaneDetailes", "Planes");
                  });*/
         }
-       
+
+        public System.Data.Entity.DbSet<AirPlane.Domain.Entities.PhotoFullImage> PhotoFullImages { get; set; }
+
+        public System.Data.Entity.DbSet<AirPlane.Domain.Entities.StudentAddress> StudentAddresses { get; set; }
     }
 }

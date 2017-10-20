@@ -8,6 +8,9 @@ using System.Web.Mvc;
 
 namespace AirPlane.WebUI.Controllers.RoutingURL
 {
+
+
+  
     [Authorize(Users ="admin")]
     public class CustomController : Controller
     {
@@ -24,8 +27,8 @@ namespace AirPlane.WebUI.Controllers.RoutingURL
             HttpContext.Response.Write(DataEntity);
             HttpContext.Response.Write(infos);
         }
-        
 
+        //Custom/Index/
         public ActionResult Index()
         {
            

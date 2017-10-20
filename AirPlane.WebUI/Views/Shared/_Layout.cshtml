@@ -104,7 +104,7 @@
         <div id="categories" class="col-xs-3">
           @Html.Action("Menu", "Nav")
         </div>
-      @*@RenderSection("Angular")*@
+     @RenderSection("Angular", required: false)
 
         <div  class="col-xs-8">
             @RenderBody()

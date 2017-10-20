@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -132,6 +133,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Areas\Section2\Section2AreaRegistration.cs" />
     <Compile Include="Controllers\MVCGuide\JavaScriptController.cs" />
     <Compile Include="Controllers\MVCGuide\PeopleController.cs" />
     <Compile Include="Controllers\MVCGuide\ServiceController.cs" />
@@ -926,6 +928,9 @@
     <Content Include="Scripts\i18n\angular-locale_zh.js" />
     <Content Include="Scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
+    <Content Include="Areas\Section2\Views\web.config" />
+    <None Include="Properties\PublishProfiles\airplane.dawidstoga.net - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\AirPlane.pubxml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\javaGuide.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
@@ -948,7 +953,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\NinjectWebCommon.cs" />
@@ -1045,6 +1052,9 @@
     <Content Include="Views\People\GetPeopleAjax.cshtml" />
     <Content Include="Views\JavaScript\Index.cshtml" />
     <Content Include="Views\JavaScript\JQuery.cshtml" />
+    <Content Include="Views\MvcGuide\EFAction.cshtml" />
+    <Content Include="Views\MvcGuide\ControllerAction.cshtml" />
+    <Content Include="Views\MvcGuide\ViewAction.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1057,6 +1067,9 @@
     <Folder Include="Areas\Section1\Models\" />
     <Folder Include="Areas\Section1\Views\Home\" />
     <Folder Include="Areas\Section1\Views\Shared\" />
+    <Folder Include="Areas\Section2\Controllers\" />
+    <Folder Include="Areas\Section2\Models\" />
+    <Folder Include="Areas\Section2\Views\Shared\" />
     <Folder Include="Views\Customer\" />
     <Folder Include="Views\Homes\" />
     <Folder Include="Views\Product\" />

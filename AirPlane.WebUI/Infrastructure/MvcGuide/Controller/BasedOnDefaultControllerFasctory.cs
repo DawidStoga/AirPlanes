@@ -7,9 +7,9 @@ using System.Web.Routing;
 
 namespace AirPlane.WebUI.Infrastructure
 {
-    public class BasedOnDefaultControllerFasctory:DefaultControllerFactory
+    public class BasedOnDefaultControllerFactory:DefaultControllerFactory
     {
-        public BasedOnDefaultControllerFasctory(IControllerActivator controllerActivator):base(controllerActivator)
+        public BasedOnDefaultControllerFactory(IControllerActivator controllerActivator):base(controllerActivator)
         {
 
         }
@@ -18,7 +18,7 @@ namespace AirPlane.WebUI.Infrastructure
         {
             return base.GetControllerType(requestContext, controllerName);
         }
-        public BasedOnDefaultControllerFasctory()
+        public BasedOnDefaultControllerFactory()
         {
            
         }

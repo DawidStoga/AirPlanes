@@ -9,6 +9,7 @@ namespace AirPlane.WebUI.Controllers
 {
     public class BasicController : IController
     {
+        //Basic/Index
         public void Execute(RequestContext requestContext)
         {
             var controller = (string)requestContext.RouteData.Values["controller"];

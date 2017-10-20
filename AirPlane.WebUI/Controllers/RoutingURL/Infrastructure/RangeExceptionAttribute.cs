@@ -14,7 +14,7 @@ namespace AirPlane.WebUI.Controllers.RoutingURL.Infrastructure
         {
           if( !filterContext.ExceptionHandled && filterContext.Exception is ArgumentOutOfRangeException )
             {
-                filterContext.Result = new RedirectResult("~/Content/RangeErrorPage.html");
+                filterContext.Result = new RedirectResult("~/Content/RangeErrorPage.html"); // or
                 filterContext.HttpContext.Response.Write("ERROR");
                 filterContext.ExceptionHandled = true;
             }
