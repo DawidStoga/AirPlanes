@@ -73,6 +73,14 @@
     <Compile Include="Migrations\201701182259143_ValidateDB.Designer.cs">
       <DependentUpon>201701182259143_ValidateDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711022037582_ctxConf.cs" />
+    <Compile Include="Migrations\201711022037582_ctxConf.Designer.cs">
+      <DependentUpon>201711022037582_ctxConf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711022210592_newPhoto.cs" />
+    <Compile Include="Migrations\201711022210592_newPhoto.Designer.cs">
+      <DependentUpon>201711022210592_newPhoto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -86,6 +94,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701182259143_ValidateDB.resx">
       <DependentUpon>201701182259143_ValidateDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711022037582_ctxConf.resx">
+      <DependentUpon>201711022037582_ctxConf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711022210592_newPhoto.resx">
+      <DependentUpon>201711022210592_newPhoto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

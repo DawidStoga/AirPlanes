@@ -11,6 +11,10 @@ namespace AirPlane.Domain.Entities
 {
    public class Aircraft
     {
+        public Aircraft()
+        {
+            this.AirLines = new HashSet<Airline>();
+        }
         [Key]
         [HiddenInput(DisplayValue = false)]
         public int AircraftID { get; set; }
