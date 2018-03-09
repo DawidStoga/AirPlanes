@@ -1,4 +1,4 @@
-﻿
+
 using AirPlane.Domain.Concrete;
 using System;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ namespace AirPlane.WebUI.Controllers.MVCGuide
         public string EFAction()
         {
            
-            
+            //GIT tets 13:155
 
 
             string retunString = "";
