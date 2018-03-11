@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Web;
 using System.Web.Mvc;
 using AirPlane.Domain.Abstract;
@@ -19,9 +21,11 @@ namespace AirPlane.WebUI.Controllers
             orderProcessor = orderProc;
 
         }
-
+        
         public RedirectToRouteResult AddToCart(Cart cart, int aircraftId, string returnUrl)  //todo: z prodictId nie dziala
         {
+
+               
             Aircraft product = repository.AirCrafts.FirstOrDefault(p => p.AircraftID == aircraftId);
             if(product !=null)
             {

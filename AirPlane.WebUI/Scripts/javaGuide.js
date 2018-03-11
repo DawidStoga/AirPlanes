@@ -51,3 +51,9 @@ function ShowObject()
     return car.color + car.fullName();
     car["color"];
 }
+
+// get all divs in the document
+let divs = document.getElementsByTagName('div');
+elem.getElementsByClassName(className)
+elem.querySelectorAll
+elem.querySelector(css)

@@ -14,6 +14,9 @@ namespace AirPlane.WebUI
         public static void RegisterRoutes(RouteCollection routes)
         {
 
+           
+            routes.Add(new LegacyRoute(
+                "~/Articles/WindowsXp", "~/old/.NET1,0_Class_Library"));
 #if false
 
              //Custom Route Handler => CustomHttpHandler
