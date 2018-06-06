@@ -1,0 +1,26 @@
+﻿<kendo-grid [data]="gridData"
+            [height]="250"
+            [pageable]="true"
+            [pageSize]="state.take"
+            [skip]="state.skip"
+            [sort]="state.sort"
+            [sortable]="true"
+            [filter]="state.filter"
+            filterable="menu"
+            (dataStateChange)="dataStateChange($event)">
+    <kendo-grid-column field="ProductID" title="ID" width="40" [filterable]="false">
+    </kendo-grid-column>
+    <kendo-grid-column field="ProductName" title="Name" width="150">
+    </kendo-grid-column>
+    <kendo-grid-column field="Category.CategoryName" title="Category" width="120">
+    </kendo-grid-column>
+    <kendo-grid-column field="UnitPrice" title="Price" width="120" filter="numeric" format="{0:c}">
+    </kendo-grid-column>
+    <kendo-grid-column field="UnitsInStock" title="In stock" width="120" filter="numeric">
+    </kendo-grid-column>
+    <kendo-grid-column field="Discontinued" title="Discontinued" width="120" filter="boolean">
+        <ng-template kendoGridCellTemplate let-dataItem>
+            <input type="checkbox" [checked]="dataItem.Discontinued" disabled />
+        </ng-template>
+    </kendo-grid-column>
+</kendo-grid>

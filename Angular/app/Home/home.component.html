@@ -1,0 +1,57 @@
+﻿<h1>Home</h1>
+<br />
+<h3>Welcome to Angular 4</h3>
+<div class="col-md-7">
+    <alert-component [alertType]="alertType" [alertMessage]="alertMessage"></alert-component>
+</div>
+
+<div class="col-md-6" *ngIf="!isLoggedIn">
+    <form [formGroup]="form" (ngSubmit)="getLoggedIn()">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input [(ngModel)]="username"
+                   type="text"
+                   class="form-control"
+                   id="username"
+                   placeholder="Enter username"
+                   name="username"
+                   formControlName="username">
+            <alert-component [alertType]="2" [alertMessage]="formErrors.username"
+                             *ngIf="!form.valid && formErrors.username"></alert-component>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input [(ngModel)]="password"
+                   type="password"
+                   class="form-control"
+                   id="password"
+                   placeholder="Enter password"
+                   name="password"
+                   formControlName="password">
+            <alert-component [alertType]="2" [alertMessage]="formErrors.password"
+                             *ngIf="!form.valid && formErrors.password"></alert-component>
+
+        </div>
+        <button type="submit" [disabled]="!form.valid" class="btn btn-default">Submit</button>
+    </form>
+</div>
+<div class="col-md-8" *ngIf="isLoggedIn">
+    <div class="col-md-12 row">
+        <modal-component [modalTitle]="modalTitle" [modalMessage]="modalMessage"></modal-component>
+    </div>
+
+    <h3 class="col-md-12 row sub-head">
+        Kendo Auto Complete
+    </h3>
+    <div class="col-md-12 row">
+        <autoComplete-component></autoComplete-component>
+    </div>
+
+    <h3 class="col-md-12 row sub-head">
+        Kendo Grid
+    </h3>
+    <div class="col-md-12 row">
+        <grid-component></grid-component>
+    </div>
+
+</div>

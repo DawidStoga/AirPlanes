@@ -17,6 +17,7 @@ namespace AirPlane.WebUI
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             ModelBinders.Binders.Add(typeof(Cart), new CartModelBinder());
+           
          //  ControllerBuilder.Current.SetControllerFactory(new CustomControllerFactory());
            var cFct =  ControllerBuilder.Current.GetControllerFactory();
             // ControllerBuilder.Current.DefaultNamespaces.Add("AirPlane.WebUI.Controllers.RoutingURL"); //add priority

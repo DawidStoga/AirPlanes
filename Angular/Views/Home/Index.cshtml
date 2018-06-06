@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('app/main.js').catch(function (err) { console.error(err); });
+    </script>
+    <link href="~/Content/Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/node_modules/%40progress/kendo-theme-default/dist/all.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">*@
+
+</head>
+<body>
+    <root-container>
+        <div style="position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 10;">
+            <div style="background: url(/Content/Images/spinner.gif) no-repeat center center;
+                width: 100%;
+                height: 100%;
+                margin: 0 auto;
+                padding: 10px;
+                position: relative;">
+            </div>
+        </div>
+    </root-container>
+</body>
+</html>

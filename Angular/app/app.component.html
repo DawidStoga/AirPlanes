@@ -1,0 +1,16 @@
+﻿<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li *ngFor="let item of menu" routerLink="{{item.link}}" routerLinkActive="active"><a>{{item.title}}</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid container-body">
+    <router-outlet></router-outlet>
+</div>
+<footer class="container-fluid text-center">
+    <p>Copyright © Vishnu Sudhakaran</p>
+</footer>
+
