@@ -11,10 +11,19 @@ namespace AutoFacDemo.Mappers
     public static IMapper Configure()
         {
             var config = new MapperConfiguration(
-                cfg => { cfg.AddProfile<AppProfile>(); });
+                cfg => {
+                    cfg.AddProfile<AppProfile>();
+
+                });
+
+            //   var mapper1 = config.CreateMapper(); 
+            //or
+             
+            config.AssertConfigurationIsValid();
 
             IMapper mapper = new Mapper(config);
-           
+           // Mapper.Configuration.AssertConfigurationIsValid();
+
             return mapper;
         }
 

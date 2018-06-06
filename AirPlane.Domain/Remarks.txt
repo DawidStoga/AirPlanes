@@ -1,0 +1,4 @@
+﻿I.AutoMapper
+ 1. destination type is not necessary  mapper.Map<A, B> (a)       b =  mapper.Map<B>(a)
+ 2. configuration: As Imapper with AutoFac... check other solution!!
+ 3. lambda Automapp
