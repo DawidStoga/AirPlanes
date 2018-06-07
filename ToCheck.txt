@@ -1,0 +1,12 @@
+1. przejrzec branche i usunac niepotzrebne
+2. poronic branche tematyczne
+3. zaimplementowac mappera do Airplane
+4.  Stworzyc angulara z MVC
+5. sprawdzic baze danych - import istniejacej - puscic na githuba
+6. mvc+angular + EF
+7. MVC mocne review
+8. MVC module  review
+9. NET mocne review.
+
+
+
