@@ -24,7 +24,10 @@
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
 
       // other libraries
-      'rxjs':                      'npm:rxjs',
+        'rxjs': 'npm:rxjs',
+        'rxjs-compat': 'npm:rxjs-compat',
+        'rxjs-system-bundle': 'npm:rxjs-system-bundle',
+        'rxjs-system-bundle': 'npm:rxjs-system-bundle',
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
@@ -37,9 +40,14 @@
           }
         }
       },
-      rxjs: {
-        defaultExtension: 'js'
-      }
+        rxjs: {
+            main: 'index.js',
+           defaultExtension: 'js'
+        },
+        "rxjs/operators": {
+            main: 'index.js',
+            defaultExtension: 'js'
+        }
     }
   });
 })(this);
