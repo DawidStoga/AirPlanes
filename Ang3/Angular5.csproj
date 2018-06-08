@@ -170,10 +170,27 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\airplane-search\airplane-search.component.css" />
+    <Content Include="app\airplane-search\airplane-search.component.html" />
+    <Content Include="app\airplane-search\airplane-search.component.js" />
+    <Content Include="app\airplane-search\airplane-search.component.spec.js" />
+    <Content Include="app\airplane\airplane.component.css" />
+    <Content Include="app\airplane\airplane.component.html" />
+    <Content Include="app\airplane\airplane.component.js" />
+    <Content Include="app\airplane\airplane.component.spec.js" />
     <Content Include="app\app.component.css" />
     <Content Include="app\app.component.html" />
     <Content Include="app\dashboard\dashboard.component.css" />
     <Content Include="app\dashboard\dashboard.component.html" />
+    <Content Include="app\messages\messages.component.css" />
+    <Content Include="app\messages\messages.component.html" />
+    <Content Include="app\messages\messages.component.js" />
+    <Content Include="app\messages\messages.component.spec.js" />
+    <Content Include="app\Mock\mock-planes.js" />
+    <Content Include="app\plane-details\plane-details.component.css" />
+    <Content Include="app\plane-details\plane-details.component.html" />
+    <Content Include="app\plane-details\plane-details.component.js" />
+    <Content Include="app\plane-details\plane-details.component.spec.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -188,6 +205,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="package.json" />
+    <Content Include="app\plane-details\plane-details.component.js.map" />
+    <Content Include="app\plane-details\plane-details.component.spec.js.map" />
+    <Content Include="app\Mock\mock-planes.js.map" />
+    <Content Include="app\messages\messages.component.js.map" />
+    <Content Include="app\messages\messages.component.spec.js.map" />
+    <Content Include="app\airplane-search\airplane-search.component.js.map" />
+    <Content Include="app\airplane-search\airplane-search.component.spec.js.map" />
+    <Content Include="app\airplane\airplane.component.js.map" />
+    <Content Include="app\airplane\airplane.component.spec.js.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -236,14 +262,29 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="app\airplane-search\airplane-search.component.spec.ts" />
+    <TypeScriptCompile Include="app\airplane-search\airplane-search.component.ts" />
+    <TypeScriptCompile Include="app\airplane\airplane.component.spec.ts" />
+    <TypeScriptCompile Include="app\airplane\airplane.component.ts" />
     <TypeScriptCompile Include="app\app-routing.module.ts" />
     <TypeScriptCompile Include="app\app.component.spec.ts" />
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\dashboard\dashboard.component.spec.ts" />
     <TypeScriptCompile Include="app\dashboard\dashboard.component.ts" />
+    <TypeScriptCompile Include="app\in-memory-data.service.spec.ts" />
+    <TypeScriptCompile Include="app\in-memory-data.service.ts" />
     <TypeScriptCompile Include="app\main.ts" />
+    <TypeScriptCompile Include="app\message.service.spec.ts" />
+    <TypeScriptCompile Include="app\message.service.ts" />
+    <TypeScriptCompile Include="app\messages\messages.component.spec.ts" />
+    <TypeScriptCompile Include="app\messages\messages.component.ts" />
+    <TypeScriptCompile Include="app\Mock\mock-planes.ts" />
     <TypeScriptCompile Include="app\Model\machine.ts" />
+    <TypeScriptCompile Include="app\plane-details\plane-details.component.spec.ts" />
+    <TypeScriptCompile Include="app\plane-details\plane-details.component.ts" />
+    <TypeScriptCompile Include="app\plane.service.spec.ts" />
+    <TypeScriptCompile Include="app\plane.service.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
