@@ -30,9 +30,9 @@ import { RouterModule } from '@angular/router';
       FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService,{dataEncapsulation: false }
-    )
+    //HttpClientInMemoryWebApiModule.forRoot(
+    //  InMemoryDataService,{dataEncapsulation: false }
+    //)
   ],
   providers: [],
   bootstrap: [AppComponent]

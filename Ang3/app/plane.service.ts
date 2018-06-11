@@ -3,7 +3,7 @@ import {Machine} from "../app/Model/machine";
 import {PLANES} from './Mock/mock-planes';
 import {Observable, of} from 'rxjs'
 import {MessageService} from './message.service'
-import {HttpClient, HttpHeaders} from '@angular/common/http'
+import { HttpClient, HttpHeaders } from '@angular/common/http'
       
 import { catchError, map, tap } from 'rxjs/operators';
 
@@ -25,14 +25,29 @@ private planeUrl = 'api/planes'; //URL to planes
   getPlanes(): Observable<Machine[]>
   {
     this.messageService.add('PlaneService: fetched planes');
-   // return of(PLANES);
+      // return of(PLANES);
 
-   return this.http.get<Machine[]>(this.planeUrl)
-   .pipe(
-    tap(heroes => this.log(`fetched heroes`)),
+      return this.http.get(this.planeUrl)
+          .pipe(
+          map((data: Machine[]) => {
+              var machine: Machine[] = [
+                  { id: 11, name: "tes1t", Smodel: "TestModel", Stype: "TestType" },
+                  { id: 12, name: 'test2', Smodel: "TestModel2", Stype: "TestType2" }];
 
-     catchError(this.handleError('getPlanes',[]))
-   );
+              return data;
+
+          }));
+
+
+          //((res: Response) => res.json())
+
+   //   return this.http.get<Machine[]>(this.planeUrl)
+   //       .pipe(
+   // tap(heroes => this.log(`fetched heroes`)),
+
+   //  catchError(this.handleError('getPlanes',[]))
+   //);
+
   }
 
   getPlane(id: number): Observable<Machine>
