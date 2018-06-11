@@ -37,6 +37,7 @@
     "rxjs": "6.2.0",
     "rxjs-compat": "6.1.0",
     "rxjs-system-bundle": "^6.0.0",
+    "systemjs": "^0.21.4",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
