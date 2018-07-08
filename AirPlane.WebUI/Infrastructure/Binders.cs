@@ -8,9 +8,20 @@ using System.Web.Mvc;
 
 namespace AirPlane.WebUI.Infrastructure
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="=">
+    /// </typeparam>
     public class CartModelBinder : IModelBinder  //todo: wtf
     {
         private const string sessionKey = "Cart";
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="controllerContext"></param>
+        /// <param name="bindingContext"></param>
+        /// <returns></returns>
         public object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
         {
             Cart cart = null;

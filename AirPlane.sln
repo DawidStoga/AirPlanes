@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirPlane.Domain", "AirPlane.Domain\AirPlane.Domain.csproj", "{CEC852CA-7779-45CA-BDCA-9CE3990A9E2D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirPlane.UnitTests", "AirPlane.UnitTests\AirPlane.UnitTests.csproj", "{9439F173-6291-4D81-A853-C84E753742CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirPlane.WebUI", "AirPlane.WebUI\AirPlane.WebUI.csproj", "{14DCFA13-1BA2-449E-A4EE-AE4D58903270}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Features", "Features\Features\Features.csproj", "{B0534325-C339-44F9-9702-F9B4012FE1E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,8 +29,15 @@ Global
 		{14DCFA13-1BA2-449E-A4EE-AE4D58903270}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14DCFA13-1BA2-449E-A4EE-AE4D58903270}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14DCFA13-1BA2-449E-A4EE-AE4D58903270}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0534325-C339-44F9-9702-F9B4012FE1E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0534325-C339-44F9-9702-F9B4012FE1E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0534325-C339-44F9-9702-F9B4012FE1E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0534325-C339-44F9-9702-F9B4012FE1E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D213BB5-1201-4FEF-88AD-7BAE622E6323}
 	EndGlobalSection
 EndGlobal
