@@ -18,6 +18,11 @@ namespace Ang3
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            var json = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
+            json.UseDataContractJsonSerializer = true;
+            GlobalConfiguration.Configuration.Formatters.Remove(GlobalConfiguration.Configuration.Formatters.XmlFormatter);
+
+
         }
     }
 }
